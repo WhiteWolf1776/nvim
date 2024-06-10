@@ -796,6 +796,7 @@ require("lazy").setup({
 			vim.cmd.hi("Normal ctermbg=none guibg=none")
 			vim.cmd.hi("LineNr ctermbg=none guibg=none guifg=#12c812")
 			vim.cmd.hi("NonText ctermbg=none guibg=none")
+			vim.cmd.hi("NormalNC ctermbg=none guibg=none guifg=#12c812")
 		end,
 	},
 
