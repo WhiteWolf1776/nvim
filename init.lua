@@ -922,11 +922,20 @@ require("lazy").setup({
 
 -- Custom User Functions
 vim.api.nvim_create_user_command("Matrix", function()
-	vim.cmd("e do.md")
-	vim.cmd("split delegate.md")
-	vim.cmd("vsplit eliminate.md")
+	vim.cmd("e ~/EisenhowerMatrix/do.md")
+	vim.cmd("split ~/EisenhowerMatrix/delegate.md")
+	vim.cmd("vsplit ~/EisenhowerMatrix/eliminate.md")
 	vim.cmd("wincmd k")
-	vim.cmd("vsplit plan.md")
+	vim.cmd("vsplit ~/EisenhowerMatrix/plan.md")
+	vim.cmd("wincmd h")
+end, { nargs = 0 })
+
+-- Ugly... needs work
+vim.api.nvim_create_user_command("Quit", function()
+	vim.cmd("q")
+	vim.cmd("q")
+	vim.cmd("q")
+	vim.cmd("q")
 end, { nargs = 0 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
