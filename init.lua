@@ -920,5 +920,14 @@ require("lazy").setup({
 	},
 })
 
+-- Custom User Functions
+vim.api.nvim_create_user_command("Matrix", function()
+	vim.cmd("e do.md")
+	vim.cmd("split delegate.md")
+	vim.cmd("vsplit eliminate.md")
+	vim.cmd("wincmd k")
+	vim.cmd("vsplit plan.md")
+end, { nargs = 0 })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
