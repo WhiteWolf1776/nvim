@@ -930,13 +930,6 @@ vim.api.nvim_create_user_command("Matrix", function()
 	vim.cmd("wincmd h")
 end, { nargs = 0 })
 
--- Ugly... needs work
-vim.api.nvim_create_user_command("Quit", function()
-	vim.cmd("q")
-	vim.cmd("q")
-	vim.cmd("q")
-	vim.cmd("q")
-end, { nargs = 0 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
